@@ -6,7 +6,8 @@ Display your website's carbon emissions with a live updating badge. Powered by [
 
 ## Installation
 Adding the badge to your site is as simple as inserting the following lines into your markup where you would like the badge to appear:
-```
+
+```html
 <div id="cb" class="carbonbadge"></div>
 <script src="//api.websitecarbon.com/b.js" defer></script>
 ```
@@ -14,7 +15,8 @@ Adding the badge to your site is as simple as inserting the following lines into
 ![Badge - Light Version](./badge-light.png "Badge - Light Version")
 
 If you need the badge to work on a dark background, add the `class="cbd"` (carbon badge dark) to the div container, like so:
-```
+
+```html
 <div id="cb" class="carbonbadge cbd"></div>
 <script src="//api.websitecarbon.com/b.js" defer></script>
 ```
