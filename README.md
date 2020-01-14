@@ -9,7 +9,7 @@ Adding the badge to your site is as simple as inserting the following lines into
 
 ```html
 <div id="cb" class="carbonbadge"></div>
-<script src="//api.websitecarbon.com/b.js" defer></script>
+<script src="https://wholegrain.gitlab.io/website-carbon-badges/b.js" defer></script>
 ```
 
 ![Badge - Light Version](./badge-light.png "Badge - Light Version")
@@ -18,7 +18,7 @@ If you need the badge to work on a dark background, add the `class="cbd"` (carbo
 
 ```html
 <div id="cb" class="carbonbadge cbd"></div>
-<script src="//api.websitecarbon.com/b.js" defer></script>
+<script src="https://wholegrain.gitlab.io/website-carbon-badges/b.js" defer></script>
 ```
 
 ![Badge - Dark Version](./badge-dark.png "Badge - Dark Version")
