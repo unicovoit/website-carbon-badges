@@ -9,7 +9,7 @@ let m = `<div><p id="cbg">Measuring CO<sub>2</sub>&hellip;</p><a href="https://w
 
 $q('#cb').insertAdjacentHTML('beforeEnd',m);
 
-fetch('http://api.websitecarbon.com/b?url=' + encodeURIComponent(window.location.href))
+fetch('https://api.websitecarbon.com/b?url=' + encodeURIComponent(window.location.href))
     .then(function(r) {
         if (!r.ok) {
             throw Error(r);
