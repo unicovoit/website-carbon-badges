@@ -16,7 +16,7 @@
 }
 
 #cb p,
-#cb a, {
+#cb a {
     display: inline-block;
     margin: 0;
 }
