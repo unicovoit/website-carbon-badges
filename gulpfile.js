@@ -11,7 +11,7 @@ function scripts() {
     return gulp
         .src('./src/b.js')
         .pipe(replace('{{css}}', function(s) {
-            var style = fs.readFileSync('b.min.css', 'utf8');
+            var style = fs.readFileSync('./public/b.min.css', 'utf8');
             return '<style>' + style + '</style>';
         }))
         .pipe(terser())
