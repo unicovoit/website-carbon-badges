@@ -3,16 +3,18 @@ var gulp = require('gulp'),
     replace = require('gulp-replace'),
     postcss = require('gulp-postcss'),
     cssnano = require('cssnano'),
+    rename = require('gulp-rename'),
     fs = require('fs');
 
 function scripts() {
     return gulp
         .src('src/b.js')
         .pipe(replace('{{css}}', function(s) {
-            var style = fs.readFileSync('b.css', 'utf8');
+            var style = fs.readFileSync('b.min.css', 'utf8');
             return '<style>' + style + '</style>';
         }))
         .pipe(terser())
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./'));
 }
 
@@ -22,6 +24,7 @@ function styles() {
             // autoprefixer(),
             cssnano()
         ]))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./'));
 }
 
