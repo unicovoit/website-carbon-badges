@@ -1,17 +1,8 @@
 {
     "name": "website-carbon-badges",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "Display your website's carbon emissions in a lightweight badge.",
     "main": "b.js",
-    "devDependencies": {
-        "cssnano": "^4.1.10",
-        "gulp": "^4.0.2",
-        "gulp-postcss": "^8.0.0",
-        "gulp-rename": "^2.0.0",
-        "gulp-replace": "^1.0.0",
-        "gulp-terser": "^1.2.0",
-        "gulp-uglify": "^3.0.2"
-    },
     "repository": {
         "type": "git",
         "url": "git+ssh://git@gitlab.com/wholegrain/website-carbon-badges.git"

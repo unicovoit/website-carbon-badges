@@ -9,19 +9,19 @@ Adding the badge to your site is as simple as inserting the following lines into
 
 ```html
 <div id="cb" class="carbonbadge"></div>
-<script src="https://wholegrain.gitlab.io/website-carbon-badges/b.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/website-carbon-badges@0" defer></script>
 ```
 
-![Badge - Light Version](./badge-light.png "Badge - Light Version")
+![Badge - Light Version](./public/badge-light.png "Badge - Light Version")
 
 If you need the badge to work on a dark background, add the `class="cbd"` (carbon badge dark) to the div container, like so:
 
 ```html
 <div id="cb" class="carbonbadge cbd"></div>
-<script src="https://wholegrain.gitlab.io/website-carbon-badges/b.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/website-carbon-badges@0" defer></script>
 ```
 
-![Badge - Dark Version](./badge-dark.png "Badge - Dark Version")
+![Badge - Dark Version](./public/badge-dark.png "Badge - Dark Version")
 
 You may not get a result on the first page load but once our API has completed the test, you should see a result load on the badge.
 

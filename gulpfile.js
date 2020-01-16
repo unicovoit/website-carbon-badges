@@ -4,36 +4,46 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     cssnano = require('cssnano'),
     rename = require('gulp-rename'),
-    fs = require('fs');
+    fs = require('fs'),
+    markdown = require('gulp-markdown-github-style');
 
 function scripts() {
     return gulp
-        .src('src/b.js')
+        .src('./src/b.js')
         .pipe(replace('{{css}}', function(s) {
             var style = fs.readFileSync('b.min.css', 'utf8');
             return '<style>' + style + '</style>';
         }))
         .pipe(terser())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./public'));
 }
 
 function styles() {
-    return gulp.src('src/b.css')
+    return gulp.src('./src/b.css')
         .pipe(postcss([
             // autoprefixer(),
             cssnano()
         ]))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./public'));
+}
+
+function readme() {
+    return gulp.src('README.md')
+        .pipe(markdown())
+        .pipe(replace('./public/badge', function(s) {
+            return './badge';
+        }))
+        .pipe(gulp.dest('./public'));
 }
 
 function watchFiles() {
     gulp.watch(['./src/*'],
-    gulp.series(styles, scripts));
+    gulp.series(readme, styles, scripts));
 }
 
-gulp.task('default', gulp.series(styles, scripts));
+gulp.task('default', gulp.series(readme, styles, scripts));
 gulp.task('watch', watchFiles);
 
 exports.styles = styles
