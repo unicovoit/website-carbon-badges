@@ -1,6 +1,6 @@
 {
     "name": "website-carbon-badges",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Display your website's carbon emissions in a lightweight badge.",
     "main": "b.js",
     "repository": {
