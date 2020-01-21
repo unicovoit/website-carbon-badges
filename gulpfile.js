@@ -35,6 +35,7 @@ function readme() {
         .pipe(replace('./public/badge', function(s) {
             return './badge';
         }))
+        .pipe(rename('index.html'))
         .pipe(gulp.dest('./public'));
 }
 
