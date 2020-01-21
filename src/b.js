@@ -4,7 +4,7 @@ let s = `{{css}}`;
 
 $q('#cb').insertAdjacentHTML('beforeEnd',s)
 
-let m = `<div id="cbp"><p id="cbg">Measuring CO<sub>2</sub>&hellip;</p><a href="https://websitecarbon.com">Website Carbon</a></div>
+let m = `<div id="cbp"><p id="cbg">Measuring CO<sub>2</sub>&hellip;</p><a target="_blank" href="https://websitecarbon.com">Website Carbon</a></div>
     <p id="cb2"></p>`
 
 $q('#cb').insertAdjacentHTML('beforeEnd',m);
