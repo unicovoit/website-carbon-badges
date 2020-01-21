@@ -18,7 +18,7 @@ fetch('https://api.websitecarbon.com/b?url=' + encodeURIComponent(window.locatio
     })
     .then(function (r) {
         $q('#cbg').innerHTML = r.c + 'g of CO<sub>2</sub>/view'
-        $q('#cb2').innerHTML = 'Cleaner than ' + r.p + '% of websites tested'
+        $q('#cb2').innerHTML = 'Cleaner than ' + r.p + '% of pages tested'
     })
     .catch(function (e) {
         $q('#cbg').innerHTML = 'No Result';
