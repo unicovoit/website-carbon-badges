@@ -31,6 +31,7 @@ function styles() {
 
 function readme() {
     return gulp.src('README.md')
+        .pipe(gulp.dest('./public'))
         .pipe(markdown())
         .pipe(replace('./public/badge', function(s) {
             return './badge';
