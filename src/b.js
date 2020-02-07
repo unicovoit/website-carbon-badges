@@ -23,7 +23,7 @@ const newRequest = function (render = true) {
 
         // Handle error responses
         .catch(function (e) {
-            $q('cbg').innerHTML = 'No Result';
+            $q('wcb_g').innerHTML = 'No Result';
             console.log(e);
             localStorage.removeItem('wcb_'+url)
         })
@@ -31,15 +31,15 @@ const newRequest = function (render = true) {
 
 // Get the CSS and add it to the DOM. The placeholder will be filled by gulp build
 const s = '{{css}}';
-const b = $q('cb');
+const b = $q('wcb');
 b.insertAdjacentHTML('beforeEnd',s)
 
 // Add the badge markup
-b.insertAdjacentHTML('beforeEnd', '<div id="cbp"><p id="cbg">Measuring CO<sub>2</sub>&hellip;</p><a target="_blank" rel="noopener" href="https://websitecarbon.com">Website Carbon</a></div><p id="cb2"></p>');
+b.insertAdjacentHTML('beforeEnd', '<div id="wcb_p"><p id="wcb_g">Measuring CO<sub>2</sub>&hellip;</p><a target="_blank" rel="noopener" href="https://websitecarbon.com">Website Carbon</a></div><p id="wcb_2"></p>');
 
 const renderResult = function(r) {
-    $q('cbg').innerHTML = r.c + 'g of CO<sub>2</sub>/view'
-    $q('cb2').insertAdjacentHTML('beforeEnd', 'Cleaner than ' + r.p + '% of pages tested')
+    $q('wcb_g').innerHTML = r.c + 'g of CO<sub>2</sub>/view'
+    $q('wcb_2').insertAdjacentHTML('beforeEnd', 'Cleaner than ' + r.p + '% of pages tested')
 }
 
 // Get result if it's saved
