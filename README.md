@@ -2,6 +2,8 @@
 
 Display your website's carbon emissions with a live updating badge. Powered by [Website Carbon](https://websitecarbon.com). Made with as few bytes as possible by [Wholegrain Digital](https://wholegraindigital.com)
 
+Working example [here](./light.html).
+
 ## Installation
 Adding the badge to your site is as simple as inserting the following lines into your markup where you would like the badge to appear:
 

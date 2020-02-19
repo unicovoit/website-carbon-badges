@@ -2,6 +2,8 @@
 
 Display your website's carbon emissions with a live updating badge. Powered by [Website Carbon](https://websitecarbon.com). Made with as few bytes as possible by [Wholegrain Digital](https://wholegraindigital.com)
 
+Working example [here](./light.html).
+
 ## Installation
 Adding the badge to your site is as simple as inserting the following lines into your markup where you would like the badge to appear:
 
@@ -12,8 +14,7 @@ Adding the badge to your site is as simple as inserting the following lines into
 
 ![Badge - Light Version](./public/badge-light.png "Badge - Light Version")
 
-If you need the badge to work on a dark background, add the `class="cbd"` (carbon badge dark) to the div container, like so:
-
+If you need the badge to work on a dark background, add the `wcb-d` to the div container, like so:
 ```html
 <div id="wcb" class="wcb carbonbadge wcb-d"></div>
 <script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer></script>
@@ -22,7 +23,7 @@ If you need the badge to work on a dark background, add the `class="cbd"` (carbo
 ![Badge - Dark Version](./public/badge-dark.png "Badge - Dark Version")
 
 
-4
+
 ## Development Info
 To get started:
 - `npm install`
