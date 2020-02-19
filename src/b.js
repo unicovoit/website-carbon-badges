@@ -51,11 +51,6 @@ if (('fetch' in window)) { // If the fetch API is not available, don't do anythi
     // If there is a cached response, use it
     if (cachedResponse) {
         const r = JSON.parse(cachedResponse)
-
-        // If time since response was cached is over a week, then don't use cached response and make a call to the API instead
-        if ((t - r.t) > (604800000)) {
-            newRequest()
-        } else {
             renderResult(r)
 
             // If time since response was cached is over a day, then make a new request and update the cached result in the background
