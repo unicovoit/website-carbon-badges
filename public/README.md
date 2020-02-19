@@ -1,8 +1,6 @@
 # Website Carbon Badges
 
-Display your website's carbon emissions with a live updating badge. Powered by [Website Carbon](https://websitecarbon.com). Made with as few bytes as possible by [Wholegrain Digital](https://wholegraindigital.com)
-
-Working example [here](./light.html).
+This badge displays a live calculation of the carbon emissions per page view of any page it is embedded on. Powered by [Website Carbon](https://websitecarbon.com) and made with as few bytes as possible by [Wholegrain Digital](https://wholegraindigital.com)
 
 ## Installation
 Adding the badge to your site is as simple as inserting the following lines into your markup where you would like the badge to appear:
@@ -14,7 +12,7 @@ Adding the badge to your site is as simple as inserting the following lines into
 
 ![Badge - Light Version](./public/badge-light.png "Badge - Light Version")
 
-If you need the badge to work on a dark background, add the `wcb-d` to the div container, like so:
+If you need the badge to work on a dark background, add the class, `.wcb-d` to the div container, like so:
 ```html
 <div id="wcb" class="wcb carbonbadge wcb-d"></div>
 <script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer></script>
@@ -22,6 +20,11 @@ If you need the badge to work on a dark background, add the `wcb-d` to the div c
 
 ![Badge - Dark Version](./public/badge-dark.png "Badge - Dark Version")
 
+See a working example [here](./light.html).
+
+## More Info
+
+To reduce data transfer and server load, the badge caches the result on the user's device and will only make a maximum of one API call per day for each page it is embedded on. If a user visits the same page more than once within a day, the result will have been cached.
 
 
 ## Development Info
