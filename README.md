@@ -1,6 +1,8 @@
 # Website Carbon Badges
 
-This badge displays a live calculation of the carbon emissions per page view of any page it is embedded on. Powered by [Website Carbon](https://websitecarbon.com) and made with as few bytes as possible by [Wholegrain Digital](https://wholegraindigital.com)
+This badge displays a live calculation of the carbon emissions per page view of any page it is embedded on. Powered by [Website Carbon](https://websitecarbon.com) and made with minimum bytes by [Wholegrain Digital](https://wholegraindigital.com)
+
+To raise issues, contribute or check out the code, visit the [Gitlab repo](https://gitlab.com/wholegrain/website-carbon-badges/).
 
 ## Installation
 Adding the badge to your site is as simple as inserting the following lines into your markup where you would like the badge to appear:
@@ -12,7 +14,7 @@ Adding the badge to your site is as simple as inserting the following lines into
 
 ![Badge - Light Version](./public/badge-light.png "Badge - Light Version")
 
-If you need the badge to work on a dark background, add the class, `.wcb-d` to the div container, like so:
+If you need the badge to work on a dark background, add the class, `.wcb-d` to the div container:
 ```html
 <div id="wcb" class="wcb carbonbadge wcb-d"></div>
 <script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer></script>
