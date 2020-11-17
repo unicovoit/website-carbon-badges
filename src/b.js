@@ -1,9 +1,9 @@
-const $q = (selector) => document.getElementById(selector);
-const url = encodeURIComponent(window.location.href)
+const wcID = (selector) => document.getElementById(selector);
+const wcU = encodeURIComponent(window.location.href)
 
 const newRequest = function (render = true) {
     // Run the API request because there is no cached result available
-    fetch('https://api.websitecarbon.com/b?url=' + url)
+    fetch('https://api.websitecarbon.com/b?url=' + wcU)
         .then(function (r) {
             if (!r.ok) {
                 throw Error(r);
@@ -18,34 +18,34 @@ const newRequest = function (render = true) {
 
             // Save the result into localStorage with a timestamp
             r.t = new Date().getTime()
-            localStorage.setItem('wcb_'+url, JSON.stringify(r))
+            localStorage.setItem('wcb_'+wcU, JSON.stringify(r))
         })
 
         // Handle error responses
         .catch(function (e) {
-            $q('wcb_g').innerHTML = 'No Result';
+            wcID('wcb_g').innerHTML = 'No Result';
             console.log(e);
-            localStorage.removeItem('wcb_'+url)
+            localStorage.removeItem('wcb_'+wcU)
         })
 }
 
 const renderResult = function (r) {
-    $q('wcb_g').innerHTML = r.c + 'g of CO<sub>2</sub>/view'
-    $q('wcb_2').insertAdjacentHTML('beforeEnd', 'Cleaner than ' + r.p + '% of pages tested')
+    wcID('wcb_g').innerHTML = r.c + 'g of CO<sub>2</sub>/view'
+    wcID('wcb_2').insertAdjacentHTML('beforeEnd', 'Cleaner than ' + r.p + '% of pages tested')
 }
 
 // Get the CSS and add it to the DOM. The placeholder will be filled by gulp build
-const css = '{{css}}';
-const badge = $q('wcb');
+const wcC = '{{css}}';
+const wcB = wcID('wcb');
 
 if (('fetch' in window)) { // If the fetch API is not available, don't do anything.
-    badge.insertAdjacentHTML('beforeEnd',css)
+    wcB.insertAdjacentHTML('beforeEnd',wcC)
 
     // Add the badge markup
-    badge.insertAdjacentHTML('beforeEnd', '<div id="wcb_p"><p id="wcb_g">Measuring CO<sub>2</sub>&hellip;</p><a target="_blank" rel="noopener" href="https://websitecarbon.com">Website Carbon</a></div><p id="wcb_2"></p>');
+    wcB.insertAdjacentHTML('beforeEnd', '<div id="wcb_p"><span id="wcb_g">Measuring CO<sub>2</sub>&hellip;</span><a id="wcb_a" target="_blank" rel="noopener" href="https://websitecarbon.com">Website Carbon</a></div><span id="wcb_2">&nbsp;</span>');
 
     // Get result if it's saved
-    let cachedResponse = localStorage.getItem('wcb_' + url)
+    let cachedResponse = localStorage.getItem('wcb_' + wcU)
     const t = new Date().getTime()
 
     // If there is a cached response, use it

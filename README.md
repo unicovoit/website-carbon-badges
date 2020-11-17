@@ -8,15 +8,16 @@ To raise issues, contribute or check out the code, visit the [Gitlab repo](https
 Adding the badge to your site is as simple as inserting the following lines into your markup where you would like the badge to appear:
 
 ```html
-<div id="wcb" class="wcb carbonbadge"></div>
+<div id="wcb" class="carbonbadge"></div>
 <script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer></script>
 ```
 
 ![Badge - Light Version](./public/badge-light.png "Badge - Light Version")
 
 If you need the badge to work on a dark background, add the class, `.wcb-d` to the div container:
+
 ```html
-<div id="wcb" class="wcb carbonbadge wcb-d"></div>
+<div id="wcb" class="carbonbadge wcb-d"></div>
 <script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer></script>
 ```
 
