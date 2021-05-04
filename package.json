@@ -1,6 +1,6 @@
 {
   "name": "website-carbon-badges-repo",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Display your website's carbon emissions with a live updating badge. Powered by [Website Carbon](https://websitecarbon.com). Made with as few bytes as possible by [Wholegrain Digital](https://wholegraindigital.com)",
   "main": "gulpfile.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "url": "git+ssh://git@gitlab.com/wholegrain/website-carbon-badges.git"
   },
   "author": "Wholegrain Digital",
-  "license": "ISC",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://gitlab.com/wholegrain/website-carbon-badges/issues"
   },

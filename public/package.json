@@ -8,7 +8,7 @@
         "url": "git+ssh://git@gitlab.com/wholegrain/website-carbon-badges.git"
     },
     "author": "Wholegrain Digital",
-    "license": "ISC",
+    "license": "GPL-3.0-or-later",
     "bugs": {
         "url": "https://gitlab.com/wholegrain/website-carbon-badges/issues"
     },
