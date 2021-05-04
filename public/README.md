@@ -29,13 +29,10 @@ See a working example [here](./light.html).
 
 To reduce data transfer and server load, the badge caches the result on the user's device and will only make a maximum of one API call per day for each page it is embedded on. If a user visits the same page more than once within a day, the result will have been cached.
 
-
 ## Development Info
 To get started:
 - `npm install`
-- `gulp` or `gulp watch`
+- `npm start` (build and watch for changes)
+- `npm build` (runs the gulp build process)
 
 The build process compresses the `src/b.css` file and then inserts it into the javascript file before uglifying the js file. Both b.min.css and b.min.js are output into the root but only b.min.js is used by the badge.
-
-## TODO
-- Further reduce loaded asset size if possible (please send us pull requests if you have ideas on how to do this)

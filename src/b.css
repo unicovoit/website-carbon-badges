@@ -50,12 +50,12 @@
     border-color: var(--b1);
 }
 
-.wcb-d #wcb_a {
+#wcb.wcb-d #wcb_a {
     color: var(--b1);
     background: var(--b2);
     border-color: var(--b2);
 }
 
-.wcb-d #wcb_2 {
+#wcb.wcb-d #wcb_2 {
     color: #fff;
 }
