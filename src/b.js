@@ -23,15 +23,15 @@ const newRequest = function (render = true) {
 
         // Handle error responses
         .catch(function (e) {
-            wcID('wcb_g').innerHTML = 'No Result';
+            wcID('wcb_g').innerHTML = 'Aucun résultat';
             console.log(e);
             localStorage.removeItem('wcb_'+wcU)
         })
 }
 
 const renderResult = function (r) {
-    wcID('wcb_g').innerHTML = r.c + 'g of CO<sub>2</sub>/view'
-    wcID('wcb_2').insertAdjacentHTML('beforeEnd', 'Cleaner than ' + r.p + '% of pages tested')
+    wcID('wcb_g').innerHTML = r.c + 'g de CO<sub>2</sub>/vue'
+    wcID('wcb_2').insertAdjacentHTML('beforeEnd', 'Plus propre que ' + r.p + '% des pages testées !')i
 }
 
 // Get the CSS and add it to the DOM. The placeholder will be filled by gulp build
@@ -42,7 +42,7 @@ if (('fetch' in window)) { // If the fetch API is not available, don't do anythi
     wcB.insertAdjacentHTML('beforeEnd',wcC)
 
     // Add the badge markup
-    wcB.insertAdjacentHTML('beforeEnd', '<div id="wcb_p"><span id="wcb_g">Measuring CO<sub>2</sub>&hellip;</span><a id="wcb_a" target="_blank" rel="noopener" href="https://websitecarbon.com">Website Carbon</a></div><span id="wcb_2">&nbsp;</span>');
+    wcB.insertAdjacentHTML('beforeEnd', '<div id="wcb_p"><span id="wcb_g">Mesure de CO<sub>2</sub> en cours&hellip;</span><a id="wcb_a" target="_blank" rel="noopener" href="https://websitecarbon.com">Website Carbon</a></div><span id="wcb_2">&nbsp;</span>');
 
     // Get result if it's saved
     let cachedResponse = localStorage.getItem('wcb_' + wcU)
